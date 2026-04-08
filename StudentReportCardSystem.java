@@ -12,7 +12,7 @@ public class StudentReportCardSystem
      * denom : denominator for calculating the average marks obtained by the student
      * maxMarks : maximum marks for each subject
      */
-    int UId = 0, marks = 0, avgn = 0, nump = 0, denomp = 0, maxMarks = 0;
+    int UId = 0, marks = 0, avgn=0, nump = 0, denomp = 0, maxMarks = 0;
 
     //double variables
     /**
@@ -40,6 +40,7 @@ public class StudentReportCardSystem
      * gtype : type of grade system chosen by the student
      */
     String name="", grd = "",gtype ="";
+    String subm[] = new String[avgn]; //array to store the subjects taken by the student
     
     Scanner sc = new Scanner(System.in);
     
@@ -104,9 +105,9 @@ public class StudentReportCardSystem
         System.out.println("Enter your grade accoring to the following instructions : ");
         System.out.println("Enter [N] for Numerical \t [A] for Alphabetical");
         gtype = sc.next();
+        sc.nextLine(); //to consume the newline character after nextInt() and next()
+        subm = new String[avgn];
     }
-
-    String subm[] = new String[avgn];
 
     public void input_Grades()
     {
@@ -114,7 +115,7 @@ public class StudentReportCardSystem
         for(int i=0; i<avgn;i++)
         {
             System.out.print("Subject "+(i+1)+" : ");
-            subm[i]=sc.next();
+            subm[i]=sc.nextLine();
         }
 
         //now all subjects are inside the array which is good
@@ -134,8 +135,9 @@ public class StudentReportCardSystem
                         nump = nump + marks;
                         denomp = denomp + maxMarks;
                     }
-                    avgm = (double)(nump/denomp);
+                    avgm = (double)nump/denomp;
                 }
+                break;
             
             case "A":
                 {
@@ -166,7 +168,8 @@ public class StudentReportCardSystem
                     }
                     avgm = avgm/avgn;
                 }
-            
+                break;
+
             default:
                 {
                     System.out.println("Invalid grade type entered");
