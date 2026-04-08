@@ -87,7 +87,11 @@ public class StudentReportCardSystem
 
     public void input_Main_Details()
     {
-        System.out.println("......Introduction shit and all.....");
+        System.out.println("======================================");
+        System.out.println("     STUDENT REPORT CARD SYSTEM       ");
+        System.out.println("======================================");
+        System.out.println("Calculate marks, percentage, and grade easily.");
+        System.out.println("--------------------------------------");
         System.out.println();
         System.out.println("Enter your Name :");
         name = sc.nextLine();
