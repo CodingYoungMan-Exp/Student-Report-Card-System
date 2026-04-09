@@ -88,9 +88,6 @@ public class StudentReportCardSystem
 
     public void input_Main_Details()
     {
-        System.out.println("======================================");
-        System.out.println("     STUDENT REPORT CARD SYSTEM       ");
-        System.out.println("======================================");
         System.out.println("Calculate marks, percentage, and grade easily.");
         System.out.println("--------------------------------------");
         System.out.println();
@@ -180,7 +177,7 @@ public class StudentReportCardSystem
 
     // Header
     System.out.println("==================================================");
-    System.out.println("        🎓 STUDENT REPORT CARD SYSTEM 🎓          ");
+    System.out.println("            STUDENT REPORT CARD SYSTEM            ");
     System.out.println("==================================================");
 
     object.input_Main_Details();
@@ -188,11 +185,11 @@ public class StudentReportCardSystem
 
     // Output Card
     System.out.println("\n==================================================");
-    System.out.println("                 📄 REPORT CARD                   ");
+    System.out.println("                    REPORT CARD                   ");
     System.out.println("==================================================");
 
     System.out.printf("| %-45s |\n", "Name: " + object.name);
-    
+
     System.out.printf("| %-45s |\n", "Unique ID: " + object.UId);
 
     System.out.println("|-----------------------------------------------|");
