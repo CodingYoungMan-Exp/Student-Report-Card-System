@@ -124,57 +124,52 @@ public class StudentReportCardSystem
 
         switch(gtype)
         {
-            case "N":
+            case "N" -> {
+                for(int i=0; i<avgn;i++)
                 {
-                    for(int i=0; i<avgn;i++)
-                    {
-                        System.out.print("Marks obtained in "+subm[i]+" : ");
-                        marks = sc.nextInt();
-                        System.out.println("Enter the maximum marks for "+subm[i]+" : ");
-                        maxMarks = sc.nextInt();
-                        nump = nump + marks;
-                        denomp = denomp + maxMarks;
-                    }
-                    avgm = (double)nump/denomp;
+                    System.out.print("Marks obtained in "+subm[i]+" : ");
+                    marks = sc.nextInt();
+                    System.out.println("Enter the maximum marks for "+subm[i]+" : ");
+                    maxMarks = sc.nextInt();
+                    nump = nump + marks;
+                    denomp = denomp + maxMarks;
                 }
-                break;
+                avgm = (double)nump/denomp;
+            }
             
-            case "A":
+            case "A" -> {
+                for(int i=0; i<avgn;i++)
                 {
-                    for(int i=0; i<avgn;i++)
+                    System.out.print("Grade obtained in "+subm[i]+" : ");
+                    grd = sc.next();                        
+                    switch(grd)
                     {
-                        System.out.print("Grade obtained in "+subm[i]+" : ");
-                        grd = sc.next();                        
-                        switch(grd)
-                        {
-                            case "A+" -> avgm = avgm + ap;
-                            case "A" -> avgm = avgm + a;
-                            case "A-" -> avgm = avgm + am;
-                            case "B+" -> avgm = avgm + bp;
-                            case "B" -> avgm = avgm + b;
-                            case "B-" -> avgm = avgm + bm;
-                            case "C+" -> avgm = avgm + cp;
-                            case "C" -> avgm = avgm + c;
-                            case "C-" -> avgm = avgm + cm;
-                            case "D+" -> avgm = avgm + dp;
-                            case "D" -> avgm = avgm + d;
-                            case "D-" -> avgm = avgm + dm;
-                            case "F" -> avgm = avgm + f;
-                            default -> {
-                                System.out.println("Invalid grade entered");
-                                System.exit(0);
-                            }
+                        case "A+" -> avgm = avgm + ap;
+                        case "A" -> avgm = avgm + a;
+                        case "A-" -> avgm = avgm + am;
+                        case "B+" -> avgm = avgm + bp;
+                        case "B" -> avgm = avgm + b;
+                        case "B-" -> avgm = avgm + bm;
+                        case "C+" -> avgm = avgm + cp;
+                        case "C" -> avgm = avgm + c;
+                        case "C-" -> avgm = avgm + cm;
+                        case "D+" -> avgm = avgm + dp;
+                        case "D" -> avgm = avgm + d;
+                        case "D-" -> avgm = avgm + dm;
+                        case "F" -> avgm = avgm + f;
+                        default -> {
+                            System.out.println("Invalid grade entered");
+                            System.exit(0);
                         }
                     }
-                    avgm = avgm/avgn;
                 }
-                break;
+                avgm = avgm/avgn;
+            }
 
-            default:
-                {
-                    System.out.println("Invalid grade type entered");
-                    System.exit(0);                    
-                }
+            default -> {
+                System.out.println("Invalid grade type entered");
+                System.exit(0);                    
+            }
 
         }
     }
@@ -187,8 +182,9 @@ public class StudentReportCardSystem
         object.input_Main_Details();
         object.input_Grades();
         System.out.println();
-        System.out.println("Name : "+object.name+"\t Unique ID : "+object.UId);
-        System.out.println();
-        System.out.println("Your average marks obtained is : "+object.avgm);
+        System.out.println("|            Name - "+object.name+"               |");
+        System.out.println("|           Unique ID : "+object.UId+"            |");
+        System.out.println("|                                                 |");
+        System.out.println("| Your average marks obtained is : "+object.avgm+"|");
     }
 }
