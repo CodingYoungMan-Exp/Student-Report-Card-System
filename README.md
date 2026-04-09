@@ -38,5 +38,8 @@ A robust Java-based application designed to streamline student academic record m
 ## ▶️ Getting Started
 
 ### 🔹 Clone the Repository
+Go to GitHub's terminal and type the following command:
 ```bash
 git clone https://github.com/your-username/Student-Report-Card-System.git
+
+**Replace 'your-username' with your GitHub username**
