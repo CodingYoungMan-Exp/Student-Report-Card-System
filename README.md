@@ -23,7 +23,8 @@ A robust Java-based application designed to streamline student academic record m
 ---
 
 ## 🖥️ Demo / Output Preview
-> *(Add your screenshot here for maximum impact)*
+<img width="520" height="789" alt="image" src="https://github.com/user-attachments/assets/5f7b7a3b-77ad-450b-94e8-d33e373058a0" />
+
 
 
 ---
