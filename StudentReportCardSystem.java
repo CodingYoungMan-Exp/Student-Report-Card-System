@@ -175,16 +175,36 @@ public class StudentReportCardSystem
     }
 
     public static void main(String[] args) 
-    {
-        System.out.println("Welcome to the Student Report Card System");
-        System.out.println();
-        StudentReportCardSystem object = new StudentReportCardSystem();
-        object.input_Main_Details();
-        object.input_Grades();
-        System.out.println();
-        System.out.println("|            Name - "+object.name+"               |");
-        System.out.println("|           Unique ID : "+object.UId+"            |");
-        System.out.println("|                                                 |");
-        System.out.println("| Your average marks obtained is : "+object.avgm+"|");
-    }
+{
+    StudentReportCardSystem object = new StudentReportCardSystem();
+
+    // Header
+    System.out.println("==================================================");
+    System.out.println("        🎓 STUDENT REPORT CARD SYSTEM 🎓          ");
+    System.out.println("==================================================");
+
+    object.input_Main_Details();
+    object.input_Grades();
+
+    // Output Card
+    System.out.println("\n==================================================");
+    System.out.println("                 📄 REPORT CARD                   ");
+    System.out.println("==================================================");
+
+    System.out.printf("| %-45s |\n", "Name: " + object.name);
+    
+    System.out.printf("| %-45s |\n", "Unique ID: " + object.UId);
+
+    System.out.println("|-----------------------------------------------|");
+
+    System.out.println("| Subjects Entered:                      |");
+        for(int i = 0; i < object.avgn; i++) 
+            {
+                System.out.printf("| - %-42s |\n", object.subm[i]);
+            
+            }
+    System.out.printf("| %-45s |\n", "Average Score: " + String.format("%.2f", object.avgm));
+
+    System.out.println("==================================================");
+}
 }
