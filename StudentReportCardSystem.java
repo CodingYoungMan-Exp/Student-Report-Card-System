@@ -131,7 +131,7 @@ public class StudentReportCardSystem
                     nump = nump + marks;
                     denomp = denomp + maxMarks;
                 }
-                avgm = (double)nump/denomp;
+                avgm = (double)nump/denomp*100; //calculating the average marks obtained by the student in percentage
             }
             
             case "A" -> {
